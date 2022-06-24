@@ -106,3 +106,64 @@ int main()
     break;
   }
 } */
+//最大公约数,方法1
+/* #include <stdio.h>
+int main()
+{
+  int a;
+  int b;
+  int i;
+  int max;
+  printf("input a b");
+  scanf("%d%d", &a, &b);
+  for (i = 1; i <= a && i <= b; i++)
+  {
+    if (a % i == 0 && b % i == 0)
+    {
+      max = i;
+    }
+  }
+    printf("%d", max);
+}
+ */
+/* //最大公约数,方法2
+#include <stdio.h>
+int main()
+{
+  int a;
+  int b;
+  int i;
+  int max;
+  printf("input a b");
+  scanf("%d%d", &a, &b);
+  while(a%b)
+  {
+    i = a % b;
+    a = b;
+    b = i;
+  }
+  printf("%d", b);
+} */
+
+//闰年
+/* #include <stdio.h>
+int main()
+{
+  int year = 0;
+    int count = 0;
+  for (year = 1; year <= 100; year++)
+  {
+    if (year % 4 == 0 && year % 100 != 0)
+    {
+      printf("%d\t", year);
+      count++;
+    }
+    else if (year % 400 == 0)
+    {
+      printf("%d\t", year);
+      count++;
+    }
+    //return 0;
+  }
+    printf("%d\t\t", count);
+} */
