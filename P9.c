@@ -164,6 +164,93 @@ int main()
       count++;
     }
     //return 0;
+    // if((year%4==0&&year%100!=0)||(year%400==0))
+    // {
+    //   printf("%d", year);
+    //   count++;
+    // }
   }
     printf("%d\t\t", count);
+    return 0;
+} */
+
+//打印100-200之间的素数
+//方法1：拭除法
+/* #include <stdio.h>
+int main()
+{
+  int i = 0;
+  int j = 0;
+  int count = 0;
+  for (i = 100; i <= 200; i++)
+  {
+    for (j = 2; j < i; j++)
+    {
+      if (i % j == 0)
+      {
+        break;
+      }
+    }
+    if (i == j)
+    {
+      printf("%d\t", i);
+      count++;
+    }
+  }
+  printf("\ncount=%d\n", count);
+  return 0;
+} */
+
+//方法2：
+/* #include <math.h>
+#include <stdio.h>
+int main()
+{
+  int i = 0;
+  int count = 0;
+  for (i = 100; i <= 200; i++)
+  {
+    int j = 0;
+    for (j = 2; j <= sqrt(i); j++)
+    {
+      if (i % j == 0)
+      {
+        break;
+      }
+    }
+    if (j > sqrt(i))
+    {
+      count++;
+      printf("%d\t", i);
+    }
+    // return 0;
+  }
+} */
+
+//方法3：
+/* #include <math.h>
+#include <stdio.h>
+int main()
+{
+  int i = 0;
+  int count = 0;
+  for (i = 100; i <= 200; i++)
+  // for (i = 101; i <= 200; i+=2)
+  {
+    int j = 0;
+    for (j = 2; j <= sqrt(i); j++)
+    {
+      if (i % j == 0)
+      {
+        break;
+      }
+    }
+    if (j > sqrt(i))
+    {
+      count++;
+      printf("%d\t", i);
+    }
+    // return 0;
+  }
+  printf("\ncount=%d\n", count);
 } */
