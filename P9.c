@@ -254,3 +254,133 @@ int main()
   }
   printf("\ncount=%d\n", count);
 } */
+//素数求解的n种境界
+
+/* #include <stdio.h>
+int main()
+{
+  int a = 0;
+  int b = 0;
+  for (a = 1, b = 1; a <= 100; a++)
+  {
+    if (b >= 20)
+      break;
+    if (b % 3 == 1)
+    {
+      b = b + 3;
+      continue;
+    }
+    b = b - 5;
+  }
+  printf("%d\n", a);
+  return 0;
+} */
+
+/* #include <stdio.h>
+int main()
+{
+  int i = 0;
+  int count = 0;
+  for (i = 1; i <= 100; i++)
+  {
+    if (i % 10 == 9)
+      count++;
+    // else if (i / 10 == 9)
+    if (i / 10 == 9)
+      count++;
+  }
+  printf("%d", count);
+  return 0;
+} */
+
+//求和
+/* #include <math.h>
+#include <stdio.h>
+int main()
+{
+  int i = 0;
+  double s = 0;
+  int flag = 1;
+  for (i = 1; i <= 100; i++)
+  {
+    s += flag * (1.0 / i);
+    flag = -flag;
+  }
+  printf("%lf\n", s);
+  return 0;
+} */
+
+//求最大值
+/* #include <stdio.h>
+int main()
+{
+  int i = 0;
+  int str[] = {0, 1, 2, 3, 4, 11, 6, 7, 8, 9};
+  int max = str[0];
+  for (i = 1; i < 10; i++)
+  {
+    if (max < str[i])
+      max = str[i];
+  }
+  printf("%d", max);
+}
+ */
+
+//乘法口诀表
+/* #include <stdio.h>
+int main()
+{
+  int i = 1;
+  int j = 1;
+  int s = 0;
+  for (i = 1; i <= 9; i++)
+  {
+    for (j = 1; j <= i; j++)
+    {
+      printf("%d*%d=%-2d\t",i,j,i*j );
+    }
+    printf("\n");
+  }
+} */
+#include <stdio.h>
+void menu()
+{
+  printf("*******请输入0或1******************\n");
+  printf("*****1：进入游戏 0：退出游戏********\n");
+  printf("**********************************\n");
+}
+#include <stdlib.h>
+#include <stdio.h>
+// RAND_MAX;
+void game()
+{
+  srand(1);
+  inr  ret= rand();
+  printf("%d\n",ret);
+}
+
+#include <stdio.h>
+int main()
+{
+  int input = 0;
+  do
+  {
+    menu();
+    printf("请选择>:");
+    scanf("%d", &input);
+    // scanf("%d\n", &input);这个出错了，
+    switch (input)
+    {
+    case 0:
+      printf("退出游戏\n");
+      break;
+    case 1:
+      game();
+      break;
+    default:
+      printf("选择错误！\n");
+      break;
+    }
+  } while (input);
+  return 0;
+}
