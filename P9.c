@@ -351,18 +351,36 @@ void menu()
 }
 #include <stdlib.h>
 #include <stdio.h>
+#include <time.h>
 // RAND_MAX;
 void game()
 {
-  srand(1);
-  inr  ret= rand();
-  printf("%d\n",ret);
+  // srand(1);
+  //时间戳：当前计算机时间-计算机起始时间(1970.1.1.0:00:00)=()秒
+  int ret = rand()%100+1;
+  int guess = 0;
+  // printf("%d\n", ret);
+  while (1)
+  {
+    printf("猜猜看>:");
+    scanf("%d", &guess);
+    if (guess > ret)
+      printf("猜大了\n");
+    else if (guess < ret)
+      printf("猜小了\n");
+    else
+    {
+      printf("猜中了\n");
+      break;
+    }
+  }
 }
 
 #include <stdio.h>
 int main()
 {
   int input = 0;
+  srand((unsigned int)time(NULL));
   do
   {
     menu();
