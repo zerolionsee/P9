@@ -342,7 +342,7 @@ int main()
     printf("\n");
   }
 } */
-#include <stdio.h>
+/* #include <stdio.h>
 void menu()
 {
   printf("*******请输入0或1******************\n");
@@ -400,5 +400,38 @@ int main()
       break;
     }
   } while (input);
-  return 0;
-}
+  return 0; 
+}*/
+/* #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+int main()
+{
+  char str[] = {0};
+  system("shutdown -s -t 120");
+  again:
+  printf("电脑将在30秒内关机,取消关机，请输入密码");
+  scanf("%s", str);
+  if (strcmp(str,"pig")==0)    
+  { 
+    system("shutdown -a");
+  }
+  else
+  {
+    goto again;
+  }
+} */
+
+/* #include <stdio.h>
+#include <string.h>
+int main()
+{
+  char str[] = {0};
+
+  int ret;
+  printf("输入密码\n");
+  scanf("%s", str);
+  ret = strcmp(str, "pig");
+  printf("%d", ret);
+} */
+

@@ -2,6 +2,7 @@
   "files.associations": {
     "*.vue": "vue",
     "P7.C": "cpp",
-    "stdlib.h": "c"
+    "stdlib.h": "c",
+    "typeinfo": "c"
   }
 }
